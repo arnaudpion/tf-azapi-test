@@ -11,7 +11,7 @@ provider "azapi" {
 
 resource "azapi_resource" "symbolicname" {
   type = "Microsoft.Storage/storageAccounts@2023-01-01"
-  name = "string"
+  name = "testingiacgithubscanner2"
   location = "string"
   parent_id = "/"
   tags = {
@@ -130,7 +130,8 @@ resource "azapi_resource" "symbolicname" {
         expirationAction = "Log"
         sasExpirationPeriod = "string"
       }
-      supportsHttpsTrafficOnly = true
+      # supportsHttpsTrafficOnly = true
+      supportsHttpsTrafficOnly = false
     }
     sku = {
       name = "string"

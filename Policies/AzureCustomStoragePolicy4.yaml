@@ -1,0 +1,19 @@
+metadata:
+  guidelines: "test"
+  category: "general"
+scope:
+  provider: "azure"
+definition:
+  and:
+  - cond_type: "attribute"
+    resource_types:
+    - "azapi_resource"
+    attribute: "type"
+    operator: "contains"
+    value: "Microsoft.Storage/storageAccounts"
+  - cond_type: "attribute"
+    resource_types:
+    - "azapi_resource"
+    attribute: "body"
+    operator: "not_contains"
+    value: "supportsHttpsTrafficOnly = false"

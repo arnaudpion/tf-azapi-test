@@ -1,0 +1,11 @@
+metadata:
+  guidelines: "test azapi provider"
+  category: "general" #choose one: "general"/"iam"/"kubernetes"/"monitoring"/"networking"/"public"/"secrets"/"storage"/"sast"
+scope:
+  provider: "azure" #provider is required for IaC policies. choose one: "alibaba_cloud"/"aws"/"azure"/"gcp"/"oci"
+definition:
+     cond_type: "attribute"
+     resource_types: "azapi_resource"
+     attribute: "name"
+     operator: "not_equals"
+     value: "testingiacgithubscanner2"
